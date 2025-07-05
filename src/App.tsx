@@ -22,8 +22,8 @@ export default function AssemblyEndgame() {
   // Static values
   const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
-  function addGuessedLetter(letter) {
-    setGuessedLetters(prevLetters =>
+  function addGuessedLetter(letter: string): void {
+    setGuessedLetters((prevLetters: string[]) =>
       prevLetters.includes(letter) ?
         prevLetters :
         [...prevLetters, letter]
