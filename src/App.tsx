@@ -30,7 +30,7 @@ export default function AssemblyEndgame() {
     )
   }
 
-  function startNewGame() {
+  function startNewGame(): void {
     setCurrentWord(getRandomWord())
     setGuessedLetters([])
   }
