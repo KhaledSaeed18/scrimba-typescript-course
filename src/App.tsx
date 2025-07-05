@@ -7,15 +7,13 @@ import Confetti from "react-confetti"
 
 export default function AssemblyEndgame() {
   // State values
-  const [currentWord, setCurrentWord] = useState(() => getRandomWord())
-  const [guessedLetters, setGuessedLetters] = useState([])
+  const [currentWord, setCurrentWord] = useState<string>((): string => getRandomWord())
+  const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
 
   // Derived values
   const numGuessesLeft = languages.length - 1
-  const wrongGuessCount =
-    guessedLetters.filter(letter => !currentWord.includes(letter)).length
-  const isGameWon =
-    currentWord.split("").every(letter => guessedLetters.includes(letter))
+  const wrongGuessCount = guessedLetters.filter(letter => !currentWord.includes(letter)).length
+  const isGameWon = currentWord.split("").every(letter => guessedLetters.includes(letter))
   const isGameLost = wrongGuessCount >= numGuessesLeft
   const isGameOver = isGameWon || isGameLost
   const lastGuessedLetter = guessedLetters[guessedLetters.length - 1]
