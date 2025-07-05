@@ -1,4 +1,3 @@
-import type { Language } from "./languages";
 import { words } from "./words"
 
 export function getRandomWord(): string {
@@ -6,7 +5,7 @@ export function getRandomWord(): string {
     return words[randomIndex]
 }
 
-export function getFarewellText(language: Language): string {
+export function getFarewellText(language: string): string {
     const options: string[] = [
         `Farewell, ${language}`,
         `Adios, ${language}`,
