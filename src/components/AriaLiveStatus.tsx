@@ -12,7 +12,9 @@ export default function AriaLiveStatus({
     lastGuessedLetter,
     guessedLetters,
     numGuessesLeft
-}: AriaLiveStatusProps): JSX.Element {
+}:
+    AriaLiveStatusProps
+): JSX.Element {
     return (
         <section
             className="sr-only"
