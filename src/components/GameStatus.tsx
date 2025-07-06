@@ -20,7 +20,7 @@ export default function GameStatus({
 }:
     GameStatusProps
 ): JSX.Element {
-    const gameStatusClass = clsx("game-status", {
+    const gameStatusClass: string = clsx("game-status", {
         won: isGameWon,
         lost: isGameLost,
         farewell: !isGameOver && isLastGuessIncorrect
